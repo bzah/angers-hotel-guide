@@ -2,8 +2,35 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { PageHero } from "@/components/PageHero";
+import { FaqSection, type FaqItem } from "@/components/FaqSection";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { JsonLd } from "@/components/JsonLd";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/angers-aerial.jpg";
+
+const faq: FaqItem[] = [
+  {
+    q: "Pourquoi Angers est-elle classée parmi les villes où il fait bon vivre ?",
+    a: "Angers figure régulièrement en tête des classements (L'Express, Le Figaro) grâce à sa douceur de vivre, son patrimoine UNESCO, son tramway efficace, ses 100 hectares de parcs, sa scène culturelle dense (Quai, Chabada) et la proximité du Val de Loire et de l'océan.",
+  },
+  {
+    q: "Combien d'habitants compte Angers ?",
+    a: "La ville d'Angers compte environ 155 000 habitants intra-muros et son agglomération (Angers Loire Métropole) près de 305 000 habitants. C'est la 17e ville de France.",
+  },
+  {
+    q: "Angers est-elle dans le Val de Loire ?",
+    a: "Oui, Angers est la capitale historique de l'Anjou et l'une des grandes villes du Val de Loire, classé au patrimoine mondial de l'UNESCO. Elle se trouve au confluent de la Maine, de la Loire, de la Sarthe et du Mayenne.",
+  },
+  {
+    q: "Quelle est la spécialité culinaire d'Angers ?",
+    a: "Le Quernon d'Ardoise (chocolat bleu rappelant les ardoises angevines), les rillauds (poitrine de porc confite), la fouée (petit pain au four à bois), le poisson de Loire (sandre, brochet beurre blanc), et bien sûr les vins d'Anjou et Saumur.",
+  },
+  {
+    q: "Que voir absolument à Angers ?",
+    a: "Le Château d'Angers et la Tenture de l'Apocalypse, la cathédrale Saint-Maurice, le quartier de la Doutre, le musée Jean Lurçat (Le Chant du Monde), la Place du Ralliement et le Grand Théâtre, et une promenade au bord de la Maine au coucher du soleil.",
+  },
+];
+
 
 export const Route = createFileRoute("/destination")({
   head: () => ({
@@ -94,6 +121,21 @@ function Page() {
           </div>
         </div>
       </section>
+
+      <FaqSection items={faq} />
+
+      <RelatedLinks exclude={["/destination"]} />
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TouristDestination",
+          name: "Angers",
+          description: "Capitale historique de l'Anjou, ville d'art et d'histoire au cœur du Val de Loire (UNESCO).",
+          touristType: ["Couples", "Famille", "Voyageurs culturels", "Œnotourisme"],
+          address: { "@type": "PostalAddress", addressLocality: "Angers", postalCode: "49000", addressCountry: "FR" },
+        }}
+      />
 
       <SiteFooter />
     </div>

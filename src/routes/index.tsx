@@ -3,10 +3,36 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { HotelCard } from "@/components/HotelCard";
 import { Activities } from "@/components/Activities";
+import { FaqSection, type FaqItem } from "@/components/FaqSection";
+import { RelatedLinks } from "@/components/RelatedLinks";
+import { JsonLd } from "@/components/JsonLd";
 import { featuredHotels } from "@/data/hotels";
 import { GYG_ANGERS_URL } from "@/lib/affiliate";
 import heroImg from "@/assets/hero-chateau.jpg";
 import aerialImg from "@/assets/angers-aerial.jpg";
+
+const homeFaq: FaqItem[] = [
+  {
+    q: "Quel est le meilleur hôtel à Angers ?",
+    a: "Cela dépend de votre budget et de vos priorités. Pour le charme et le centre historique, privilégiez un boutique-hôtel près du Château ou de la cathédrale. Pour le confort moderne, les 4★ de la Place du Ralliement. Pour les petits budgets, les hôtels près de la gare Saint-Laud offrent un excellent rapport qualité/prix dès 65€.",
+  },
+  {
+    q: "Combien de jours faut-il pour visiter Angers ?",
+    a: "Deux jours suffisent pour les incontournables : Château et Tenture de l'Apocalypse, cathédrale Saint-Maurice, quartier de la Doutre, musée Jean Lurçat. Comptez 3-4 jours pour étendre l'exploration aux châteaux du Val de Loire et aux vignobles d'Anjou.",
+  },
+  {
+    q: "Quand venir à Angers ?",
+    a: "La meilleure période s'étend de mai à octobre. Mai-juin pour la douceur et la floraison, septembre pour les Accroche-Cœurs et les vendanges, octobre pour les couleurs d'automne sur la Loire. Évitez août (chaleur, certains restaurants fermés).",
+  },
+  {
+    q: "Comment aller à Angers depuis Paris ?",
+    a: "TGV direct depuis Paris-Montparnasse en 1h30 (environ 1 train par heure, dès 25€ avec Ouigo). En voiture, A11 puis A87, comptez 3h avec péages.",
+  },
+  {
+    q: "Quel quartier choisir pour dormir à Angers ?",
+    a: "Le centre-ville historique pour visiter à pied, la Doutre pour le charme médiéval, le quartier de la gare pour les TGV et les pros, Saint-Serge pour les salons et le Parc Expo. Notre guide détaille chaque option.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -153,6 +179,26 @@ function Index() {
       </section>
 
       <Activities />
+
+      <FaqSection items={homeFaq} />
+
+      <RelatedLinks exclude={["/"]} />
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TravelAgency",
+          name: "HotelAngers.com",
+          url: "https://hotelangers.com/",
+          description:
+            "Guide éditorial indépendant des meilleurs hôtels d'Angers — Val de Loire, France.",
+          areaServed: {
+            "@type": "City",
+            name: "Angers",
+            address: { "@type": "PostalAddress", addressLocality: "Angers", postalCode: "49000", addressCountry: "FR" },
+          },
+        }}
+      />
 
       <SiteFooter />
     </div>
