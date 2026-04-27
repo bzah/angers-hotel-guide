@@ -126,6 +126,44 @@ function Page() {
         </div>
       </section>
 
+      <SeoContent
+        title="Hôtel Angers Centre-Ville : le guide local complet"
+        intro={
+          <>
+            <p>
+              Choisir un <strong className="text-ink font-medium">hôtel au centre-ville d'Angers</strong> reste la décision la plus simple pour découvrir la capitale de l'Anjou. Délimité par le boulevard Foch, le boulevard Carnot, la Maine et le boulevard Ayrault, l'hyper-centre concentre les monuments majeurs (Château d'Angers, cathédrale Saint-Maurice, Logis Barrault), les meilleures tables, les boutiques de la Place du Ralliement et les deux lignes de tramway A et B.
+            </p>
+            <p>
+              Sur ce périmètre piéton de moins d'un kilomètre carré, vous trouverez des hôtels 2★, 3★ et 4★, des boutique-hôtels indépendants, ainsi que des résidences hôtelières et appart-hôtels. Les tarifs varient de 75€ pour un économique en semaine à 280€ pour une suite premium dans un hôtel particulier.
+            </p>
+          </>
+        }
+        sections={[
+          { heading: "Les rues les plus prisées pour loger", body: <p>Rue Saint-Aubin, rue des Lices, rue Plantagenêt, boulevard Foch, rue Toussaint : ces axes regroupent les meilleures adresses du centre. Évitez la rue Bressigny le jeudi soir (vie nocturne étudiante) si vous cherchez le calme absolu.</p> },
+          { heading: "Hôtels près du Château d'Angers", body: <p>Plusieurs établissements de notre sélection se situent à moins de 400 mètres de la forteresse Plantagenêt. Idéal pour visiter la <strong className="text-ink font-medium">Tenture de l'Apocalypse</strong> dès l'ouverture (9h30), avant l'arrivée des cars.</p> },
+          { heading: "Hôtels près de la cathédrale Saint-Maurice", body: <p>Le quartier de la Cité, autour de la cathédrale gothique, est le plus pittoresque d'Angers. Vues sur les flèches, ruelles pavées, Logis Barrault et galerie David d'Angers à deux pas.</p> },
+          { heading: "Hôtels près de la Place du Ralliement", body: <p>Cœur commerçant et théâtre Le Quai à 5 minutes, station tramway, terrasses et brasseries. Le choix le plus pratique pour un premier séjour à Angers.</p> },
+          { heading: "Stationnement et accès en voiture", body: <p>Quatre parkings souterrains : Ralliement, Mail, Saint-Laud, Foch-Haras (15-20€/24h, partenariats hôteliers fréquents). Zone bleue gratuite 1h30 dans certaines rues. La <strong className="text-ink font-medium">ZFE</strong> Angers Loire Métropole impose une vignette Crit'Air.</p> },
+          { heading: "Restaurants à proximité de votre hôtel", body: <p>Étoilés Michelin (Le Favre d'Anne, Une Île), bistrots angevins (La Ferme, Autour d'un Cep), street food aux Halles, et incontournables crémières-fromageries du quartier Saint-Laud. Réservez 48h à l'avance le week-end.</p> },
+          { heading: "Vie nocturne et culture", body: <p>Théâtre Le Quai, Grand Théâtre, scènes du Chabada (musiques actuelles), cinémas Les 400 Coups, et la nuit, les bars de la rue Saint-Laud, du boulevard Foch et de la rue Bressigny.</p> },
+          { heading: "Marchés et shopping", body: <p>Marché des Halles tous les jours sauf lundi, marché Lafayette le samedi matin, brocante de la place Imbach, boutiques mode autour de la rue Lenepveu et galerie marchande Fleur d'Eau.</p> },
+        ]}
+        keywords={[
+          "Hotel Angers centre ville",
+          "Hotel centre Angers",
+          "Hotel place du Ralliement",
+          "Hotel proche château Angers",
+          "Hotel cathédrale Angers",
+          "Hotel rue Saint-Aubin Angers",
+          "Hotel hyper centre Angers",
+          "Hotel 49000 Angers",
+          "Hotel Angers parking",
+          "Hotel Angers tramway A",
+          "Hotel Angers piéton",
+          "Boutique hotel centre Angers",
+        ]}
+      />
+
       <FaqSection items={faq} />
 
       <RelatedLinks exclude={["/hotels-centre-ville"]} />
