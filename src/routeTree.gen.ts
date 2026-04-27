@@ -9,16 +9,37 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as Sitemap_indexDotxmlRouteImport } from './routes/sitemap_index[.]xml'
+import { Route as SitemapDotxslRouteImport } from './routes/sitemap[.]xsl'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
 import { Route as QueFaireRouteImport } from './routes/que-faire'
 import { Route as QuartierDoutreRouteImport } from './routes/quartier-doutre'
 import { Route as ParcExpositionsRouteImport } from './routes/parc-expositions'
+import { Route as PageSitemapDotxmlRouteImport } from './routes/page-sitemap[.]xml'
 import { Route as HotelsPasCherRouteImport } from './routes/hotels-pas-cher'
 import { Route as HotelsGareRouteImport } from './routes/hotels-gare'
 import { Route as HotelsCentreVilleRouteImport } from './routes/hotels-centre-ville'
+import { Route as HotelSitemapDotxmlRouteImport } from './routes/hotel-sitemap[.]xml'
+import { Route as GuideSitemapDotxmlRouteImport } from './routes/guide-sitemap[.]xml'
 import { Route as DestinationRouteImport } from './routes/destination'
 import { Route as AppartHotelRouteImport } from './routes/appart-hotel'
 import { Route as IndexRouteImport } from './routes/index'
 
+const Sitemap_indexDotxmlRoute = Sitemap_indexDotxmlRouteImport.update({
+  id: '/sitemap_index.xml',
+  path: '/sitemap_index.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxslRoute = SitemapDotxslRouteImport.update({
+  id: '/sitemap.xsl',
+  path: '/sitemap.xsl',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const QueFaireRoute = QueFaireRouteImport.update({
   id: '/que-faire',
   path: '/que-faire',
@@ -34,6 +55,11 @@ const ParcExpositionsRoute = ParcExpositionsRouteImport.update({
   path: '/parc-expositions',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PageSitemapDotxmlRoute = PageSitemapDotxmlRouteImport.update({
+  id: '/page-sitemap.xml',
+  path: '/page-sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HotelsPasCherRoute = HotelsPasCherRouteImport.update({
   id: '/hotels-pas-cher',
   path: '/hotels-pas-cher',
@@ -47,6 +73,16 @@ const HotelsGareRoute = HotelsGareRouteImport.update({
 const HotelsCentreVilleRoute = HotelsCentreVilleRouteImport.update({
   id: '/hotels-centre-ville',
   path: '/hotels-centre-ville',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelSitemapDotxmlRoute = HotelSitemapDotxmlRouteImport.update({
+  id: '/hotel-sitemap.xml',
+  path: '/hotel-sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GuideSitemapDotxmlRoute = GuideSitemapDotxmlRouteImport.update({
+  id: '/guide-sitemap.xml',
+  path: '/guide-sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DestinationRoute = DestinationRouteImport.update({
@@ -69,35 +105,53 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/appart-hotel': typeof AppartHotelRoute
   '/destination': typeof DestinationRoute
+  '/guide-sitemap.xml': typeof GuideSitemapDotxmlRoute
+  '/hotel-sitemap.xml': typeof HotelSitemapDotxmlRoute
   '/hotels-centre-ville': typeof HotelsCentreVilleRoute
   '/hotels-gare': typeof HotelsGareRoute
   '/hotels-pas-cher': typeof HotelsPasCherRoute
+  '/page-sitemap.xml': typeof PageSitemapDotxmlRoute
   '/parc-expositions': typeof ParcExpositionsRoute
   '/quartier-doutre': typeof QuartierDoutreRoute
   '/que-faire': typeof QueFaireRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xsl': typeof SitemapDotxslRoute
+  '/sitemap_index.xml': typeof Sitemap_indexDotxmlRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/appart-hotel': typeof AppartHotelRoute
   '/destination': typeof DestinationRoute
+  '/guide-sitemap.xml': typeof GuideSitemapDotxmlRoute
+  '/hotel-sitemap.xml': typeof HotelSitemapDotxmlRoute
   '/hotels-centre-ville': typeof HotelsCentreVilleRoute
   '/hotels-gare': typeof HotelsGareRoute
   '/hotels-pas-cher': typeof HotelsPasCherRoute
+  '/page-sitemap.xml': typeof PageSitemapDotxmlRoute
   '/parc-expositions': typeof ParcExpositionsRoute
   '/quartier-doutre': typeof QuartierDoutreRoute
   '/que-faire': typeof QueFaireRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xsl': typeof SitemapDotxslRoute
+  '/sitemap_index.xml': typeof Sitemap_indexDotxmlRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/appart-hotel': typeof AppartHotelRoute
   '/destination': typeof DestinationRoute
+  '/guide-sitemap.xml': typeof GuideSitemapDotxmlRoute
+  '/hotel-sitemap.xml': typeof HotelSitemapDotxmlRoute
   '/hotels-centre-ville': typeof HotelsCentreVilleRoute
   '/hotels-gare': typeof HotelsGareRoute
   '/hotels-pas-cher': typeof HotelsPasCherRoute
+  '/page-sitemap.xml': typeof PageSitemapDotxmlRoute
   '/parc-expositions': typeof ParcExpositionsRoute
   '/quartier-doutre': typeof QuartierDoutreRoute
   '/que-faire': typeof QueFaireRoute
+  '/robots.txt': typeof RobotsDottxtRoute
+  '/sitemap.xsl': typeof SitemapDotxslRoute
+  '/sitemap_index.xml': typeof Sitemap_indexDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -105,50 +159,95 @@ export interface FileRouteTypes {
     | '/'
     | '/appart-hotel'
     | '/destination'
+    | '/guide-sitemap.xml'
+    | '/hotel-sitemap.xml'
     | '/hotels-centre-ville'
     | '/hotels-gare'
     | '/hotels-pas-cher'
+    | '/page-sitemap.xml'
     | '/parc-expositions'
     | '/quartier-doutre'
     | '/que-faire'
+    | '/robots.txt'
+    | '/sitemap.xsl'
+    | '/sitemap_index.xml'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/appart-hotel'
     | '/destination'
+    | '/guide-sitemap.xml'
+    | '/hotel-sitemap.xml'
     | '/hotels-centre-ville'
     | '/hotels-gare'
     | '/hotels-pas-cher'
+    | '/page-sitemap.xml'
     | '/parc-expositions'
     | '/quartier-doutre'
     | '/que-faire'
+    | '/robots.txt'
+    | '/sitemap.xsl'
+    | '/sitemap_index.xml'
   id:
     | '__root__'
     | '/'
     | '/appart-hotel'
     | '/destination'
+    | '/guide-sitemap.xml'
+    | '/hotel-sitemap.xml'
     | '/hotels-centre-ville'
     | '/hotels-gare'
     | '/hotels-pas-cher'
+    | '/page-sitemap.xml'
     | '/parc-expositions'
     | '/quartier-doutre'
     | '/que-faire'
+    | '/robots.txt'
+    | '/sitemap.xsl'
+    | '/sitemap_index.xml'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppartHotelRoute: typeof AppartHotelRoute
   DestinationRoute: typeof DestinationRoute
+  GuideSitemapDotxmlRoute: typeof GuideSitemapDotxmlRoute
+  HotelSitemapDotxmlRoute: typeof HotelSitemapDotxmlRoute
   HotelsCentreVilleRoute: typeof HotelsCentreVilleRoute
   HotelsGareRoute: typeof HotelsGareRoute
   HotelsPasCherRoute: typeof HotelsPasCherRoute
+  PageSitemapDotxmlRoute: typeof PageSitemapDotxmlRoute
   ParcExpositionsRoute: typeof ParcExpositionsRoute
   QuartierDoutreRoute: typeof QuartierDoutreRoute
   QueFaireRoute: typeof QueFaireRoute
+  RobotsDottxtRoute: typeof RobotsDottxtRoute
+  SitemapDotxslRoute: typeof SitemapDotxslRoute
+  Sitemap_indexDotxmlRoute: typeof Sitemap_indexDotxmlRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap_index.xml': {
+      id: '/sitemap_index.xml'
+      path: '/sitemap_index.xml'
+      fullPath: '/sitemap_index.xml'
+      preLoaderRoute: typeof Sitemap_indexDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xsl': {
+      id: '/sitemap.xsl'
+      path: '/sitemap.xsl'
+      fullPath: '/sitemap.xsl'
+      preLoaderRoute: typeof SitemapDotxslRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/que-faire': {
       id: '/que-faire'
       path: '/que-faire'
@@ -170,6 +269,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ParcExpositionsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/page-sitemap.xml': {
+      id: '/page-sitemap.xml'
+      path: '/page-sitemap.xml'
+      fullPath: '/page-sitemap.xml'
+      preLoaderRoute: typeof PageSitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/hotels-pas-cher': {
       id: '/hotels-pas-cher'
       path: '/hotels-pas-cher'
@@ -189,6 +295,20 @@ declare module '@tanstack/react-router' {
       path: '/hotels-centre-ville'
       fullPath: '/hotels-centre-ville'
       preLoaderRoute: typeof HotelsCentreVilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotel-sitemap.xml': {
+      id: '/hotel-sitemap.xml'
+      path: '/hotel-sitemap.xml'
+      fullPath: '/hotel-sitemap.xml'
+      preLoaderRoute: typeof HotelSitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/guide-sitemap.xml': {
+      id: '/guide-sitemap.xml'
+      path: '/guide-sitemap.xml'
+      fullPath: '/guide-sitemap.xml'
+      preLoaderRoute: typeof GuideSitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/destination': {
@@ -219,12 +339,18 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppartHotelRoute: AppartHotelRoute,
   DestinationRoute: DestinationRoute,
+  GuideSitemapDotxmlRoute: GuideSitemapDotxmlRoute,
+  HotelSitemapDotxmlRoute: HotelSitemapDotxmlRoute,
   HotelsCentreVilleRoute: HotelsCentreVilleRoute,
   HotelsGareRoute: HotelsGareRoute,
   HotelsPasCherRoute: HotelsPasCherRoute,
+  PageSitemapDotxmlRoute: PageSitemapDotxmlRoute,
   ParcExpositionsRoute: ParcExpositionsRoute,
   QuartierDoutreRoute: QuartierDoutreRoute,
   QueFaireRoute: QueFaireRoute,
+  RobotsDottxtRoute: RobotsDottxtRoute,
+  SitemapDotxslRoute: SitemapDotxslRoute,
+  Sitemap_indexDotxmlRoute: Sitemap_indexDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
