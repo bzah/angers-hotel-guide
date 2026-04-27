@@ -6,6 +6,7 @@ import { HotelCard } from "@/components/HotelCard";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { apartHotels, budgetHotels } from "@/data/hotels";
 import heroImg from "@/assets/angers-aerial.jpg";
 
@@ -122,6 +123,13 @@ function Page() {
       </section>
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="Profitez de votre déplacement professionnel à Angers"
+        description="Salon ou congrès au Parc Expo ? Consacrez votre soirée libre à une visite du Château d'Angers, à un atelier Cointreau ou à une dégustation de vins d'Anjou — tout est à 15 min en tram."
+        ctaLabel="Activités après salon"
+      />
+
+
 
       <RelatedLinks exclude={["/parc-expositions"]} />
 

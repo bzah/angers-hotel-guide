@@ -5,6 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/angers-aerial.jpg";
 
@@ -123,6 +124,13 @@ function Page() {
       </section>
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="Vivre Angers comme un local"
+        description="Plus de 80 expériences sélectionnées à Angers et dans le Val de Loire : visites guidées en français, ateliers gastronomiques, dégustations, croisières et excursions aux châteaux royaux."
+        ctaLabel="Toutes les expériences"
+      />
+
+
 
       <RelatedLinks exclude={["/destination"]} />
 
