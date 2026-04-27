@@ -180,6 +180,26 @@ function Index() {
 
       <Activities />
 
+      <FaqSection items={homeFaq} />
+
+      <RelatedLinks exclude={["/"]} />
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TravelAgency",
+          name: "HotelAngers.com",
+          url: "https://hotelangers.com/",
+          description:
+            "Guide éditorial indépendant des meilleurs hôtels d'Angers — Val de Loire, France.",
+          areaServed: {
+            "@type": "City",
+            name: "Angers",
+            address: { "@type": "PostalAddress", addressLocality: "Angers", postalCode: "49000", addressCountry: "FR" },
+          },
+        }}
+      />
+
       <SiteFooter />
     </div>
   );
