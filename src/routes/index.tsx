@@ -106,17 +106,17 @@ function Index() {
       </section>
 
       {/* INTRO */}
-      <section className="container-editorial py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="container-editorial py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         <div className="lg:col-span-5">
           <div className="mb-6 flex items-center gap-4">
             <span className="rule" />
             <span className="eyebrow">L'Anjou, autrement</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-light leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight">
             Angers, capitale <span className="italic text-ink-muted">discrète</span> du Val de Loire.
           </h2>
         </div>
-        <div className="lg:col-span-7 lg:col-start-7 space-y-6 text-ink-muted text-lg leading-relaxed">
+        <div className="lg:col-span-7 lg:col-start-7 space-y-5 text-ink-muted text-base sm:text-lg leading-relaxed">
           <p>
             Classée parmi les villes les plus agréables de France, Angers conjugue
             patrimoine UNESCO, douceur angevine et une scène hôtelière en plein
@@ -134,24 +134,24 @@ function Index() {
       </section>
 
       {/* FEATURED HOTELS */}
-      <section id="hotels" className="bg-paper-light py-28 border-y border-ink/10">
+      <section id="hotels" className="bg-paper-light py-20 lg:py-28 border-y border-ink/10">
         <div className="container-editorial">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
             <div>
               <div className="mb-4 flex items-center gap-4">
                 <span className="rule" />
                 <span className="eyebrow">Adresses Confidentielles</span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight">
                 Nos hôtels coups de <span className="italic text-ink-muted">cœur</span>
               </h2>
             </div>
-            <p className="text-ink-muted max-w-md">
+            <p className="text-ink-muted max-w-md text-sm sm:text-base">
               Trois établissements emblématiques d'Angers, alliant héritage architectural et confort contemporain.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-12 lg:gap-y-16">
             {featuredHotels.map((h) => (
               <HotelCard key={h.name} hotel={h} />
             ))}
@@ -160,7 +160,7 @@ function Index() {
       </section>
 
       {/* AERIAL / DESTINATION */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
+      <section className="relative h-[55vh] min-h-[340px] lg:h-[60vh] lg:min-h-[400px] flex items-end overflow-hidden">
         <img
           src={aerialImg}
           alt="Vue aérienne d'Angers et de la cathédrale Saint-Maurice"
@@ -170,9 +170,9 @@ function Index() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
-        <div className="container-editorial relative pb-16 text-paper-light">
+        <div className="container-editorial relative pb-12 lg:pb-16 text-paper-light">
           <span className="eyebrow text-paper-light/80">Destination Angers</span>
-          <h2 className="font-serif text-4xl lg:text-6xl font-light max-w-3xl mt-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-light max-w-3xl mt-3 lg:mt-4">
             Une ville à taille humaine, <span className="italic">une histoire millénaire.</span>
           </h2>
         </div>
