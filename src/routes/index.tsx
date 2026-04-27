@@ -63,22 +63,22 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 min-h-[85vh] border-b border-ink/10">
-        <div className="lg:col-span-7 flex flex-col justify-center px-6 lg:px-20 py-20">
-          <div className="mb-8 flex items-center gap-4">
+      <section className="grid grid-cols-1 lg:grid-cols-12 lg:min-h-[85vh] border-b border-ink/10">
+        <div className="lg:col-span-7 flex flex-col justify-center px-5 sm:px-8 lg:px-20 py-16 lg:py-20 order-2 lg:order-1">
+          <div className="mb-6 lg:mb-8 flex items-center gap-4">
             <span className="rule" />
             <span className="eyebrow">Val de Loire, France</span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-balance leading-[0.9] tracking-tight mb-8">
+          <h1 className="text-[2.75rem] sm:text-6xl lg:text-7xl xl:text-8xl font-light text-balance leading-[0.95] tracking-tight mb-6 lg:mb-8">
             Le raffinement <br />
             <span className="italic text-ink-muted">à l'ombre du</span> château.
           </h1>
-          <p className="text-lg text-ink-muted max-w-[55ch] leading-relaxed mb-12 text-pretty">
+          <p className="text-base sm:text-lg text-ink-muted max-w-[55ch] leading-relaxed mb-8 lg:mb-12 text-pretty">
             Une sélection rigoureuse d'hôtels particuliers, d'appart-hôtels et de
             retraites historiques au cœur d'Angers. Reposez-vous là où l'histoire
             de France s'est écrite — entre tuffeau, ardoise et bords de Maine.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a href="#hotels" className="btn-primary">Voir notre sélection</a>
             <a
               href={GYG_ANGERS_URL}
@@ -91,7 +91,7 @@ function Index() {
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative border-l border-ink/10 bg-muted min-h-[500px]">
+        <div className="lg:col-span-5 relative lg:border-l border-ink/10 bg-muted h-[55vh] min-h-[320px] lg:min-h-[500px] order-1 lg:order-2">
           <img
             src={heroImg}
             alt="Château d'Angers au coucher du soleil sur les rives de la Maine"
@@ -99,7 +99,7 @@ function Index() {
             height={1408}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute bottom-6 right-6 bg-paper/95 backdrop-blur-sm px-4 py-2 text-[10px] uppercase tracking-[0.2em] border border-ink/10">
+          <div className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6 bg-paper/95 backdrop-blur-sm px-3 py-1.5 lg:px-4 lg:py-2 text-[9px] lg:text-[10px] uppercase tracking-[0.2em] border border-ink/10">
             Château d'Angers · XIIIe siècle
           </div>
         </div>
