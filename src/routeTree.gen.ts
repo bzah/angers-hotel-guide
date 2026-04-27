@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as QueFaireRouteImport } from './routes/que-faire'
+import { Route as QuartierDoutreRouteImport } from './routes/quartier-doutre'
+import { Route as ParcExpositionsRouteImport } from './routes/parc-expositions'
+import { Route as HotelsPasCherRouteImport } from './routes/hotels-pas-cher'
+import { Route as HotelsGareRouteImport } from './routes/hotels-gare'
+import { Route as HotelsCentreVilleRouteImport } from './routes/hotels-centre-ville'
+import { Route as DestinationRouteImport } from './routes/destination'
+import { Route as AppartHotelRouteImport } from './routes/appart-hotel'
 import { Route as IndexRouteImport } from './routes/index'
 
+const QueFaireRoute = QueFaireRouteImport.update({
+  id: '/que-faire',
+  path: '/que-faire',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuartierDoutreRoute = QuartierDoutreRouteImport.update({
+  id: '/quartier-doutre',
+  path: '/quartier-doutre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParcExpositionsRoute = ParcExpositionsRouteImport.update({
+  id: '/parc-expositions',
+  path: '/parc-expositions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelsPasCherRoute = HotelsPasCherRouteImport.update({
+  id: '/hotels-pas-cher',
+  path: '/hotels-pas-cher',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelsGareRoute = HotelsGareRouteImport.update({
+  id: '/hotels-gare',
+  path: '/hotels-gare',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelsCentreVilleRoute = HotelsCentreVilleRouteImport.update({
+  id: '/hotels-centre-ville',
+  path: '/hotels-centre-ville',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationRoute = DestinationRouteImport.update({
+  id: '/destination',
+  path: '/destination',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppartHotelRoute = AppartHotelRouteImport.update({
+  id: '/appart-hotel',
+  path: '/appart-hotel',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/appart-hotel': typeof AppartHotelRoute
+  '/destination': typeof DestinationRoute
+  '/hotels-centre-ville': typeof HotelsCentreVilleRoute
+  '/hotels-gare': typeof HotelsGareRoute
+  '/hotels-pas-cher': typeof HotelsPasCherRoute
+  '/parc-expositions': typeof ParcExpositionsRoute
+  '/quartier-doutre': typeof QuartierDoutreRoute
+  '/que-faire': typeof QueFaireRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/appart-hotel': typeof AppartHotelRoute
+  '/destination': typeof DestinationRoute
+  '/hotels-centre-ville': typeof HotelsCentreVilleRoute
+  '/hotels-gare': typeof HotelsGareRoute
+  '/hotels-pas-cher': typeof HotelsPasCherRoute
+  '/parc-expositions': typeof ParcExpositionsRoute
+  '/quartier-doutre': typeof QuartierDoutreRoute
+  '/que-faire': typeof QueFaireRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/appart-hotel': typeof AppartHotelRoute
+  '/destination': typeof DestinationRoute
+  '/hotels-centre-ville': typeof HotelsCentreVilleRoute
+  '/hotels-gare': typeof HotelsGareRoute
+  '/hotels-pas-cher': typeof HotelsPasCherRoute
+  '/parc-expositions': typeof ParcExpositionsRoute
+  '/quartier-doutre': typeof QuartierDoutreRoute
+  '/que-faire': typeof QueFaireRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/appart-hotel'
+    | '/destination'
+    | '/hotels-centre-ville'
+    | '/hotels-gare'
+    | '/hotels-pas-cher'
+    | '/parc-expositions'
+    | '/quartier-doutre'
+    | '/que-faire'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/appart-hotel'
+    | '/destination'
+    | '/hotels-centre-ville'
+    | '/hotels-gare'
+    | '/hotels-pas-cher'
+    | '/parc-expositions'
+    | '/quartier-doutre'
+    | '/que-faire'
+  id:
+    | '__root__'
+    | '/'
+    | '/appart-hotel'
+    | '/destination'
+    | '/hotels-centre-ville'
+    | '/hotels-gare'
+    | '/hotels-pas-cher'
+    | '/parc-expositions'
+    | '/quartier-doutre'
+    | '/que-faire'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppartHotelRoute: typeof AppartHotelRoute
+  DestinationRoute: typeof DestinationRoute
+  HotelsCentreVilleRoute: typeof HotelsCentreVilleRoute
+  HotelsGareRoute: typeof HotelsGareRoute
+  HotelsPasCherRoute: typeof HotelsPasCherRoute
+  ParcExpositionsRoute: typeof ParcExpositionsRoute
+  QuartierDoutreRoute: typeof QuartierDoutreRoute
+  QueFaireRoute: typeof QueFaireRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/que-faire': {
+      id: '/que-faire'
+      path: '/que-faire'
+      fullPath: '/que-faire'
+      preLoaderRoute: typeof QueFaireRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quartier-doutre': {
+      id: '/quartier-doutre'
+      path: '/quartier-doutre'
+      fullPath: '/quartier-doutre'
+      preLoaderRoute: typeof QuartierDoutreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parc-expositions': {
+      id: '/parc-expositions'
+      path: '/parc-expositions'
+      fullPath: '/parc-expositions'
+      preLoaderRoute: typeof ParcExpositionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotels-pas-cher': {
+      id: '/hotels-pas-cher'
+      path: '/hotels-pas-cher'
+      fullPath: '/hotels-pas-cher'
+      preLoaderRoute: typeof HotelsPasCherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotels-gare': {
+      id: '/hotels-gare'
+      path: '/hotels-gare'
+      fullPath: '/hotels-gare'
+      preLoaderRoute: typeof HotelsGareRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotels-centre-ville': {
+      id: '/hotels-centre-ville'
+      path: '/hotels-centre-ville'
+      fullPath: '/hotels-centre-ville'
+      preLoaderRoute: typeof HotelsCentreVilleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination': {
+      id: '/destination'
+      path: '/destination'
+      fullPath: '/destination'
+      preLoaderRoute: typeof DestinationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/appart-hotel': {
+      id: '/appart-hotel'
+      path: '/appart-hotel'
+      fullPath: '/appart-hotel'
+      preLoaderRoute: typeof AppartHotelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppartHotelRoute: AppartHotelRoute,
+  DestinationRoute: DestinationRoute,
+  HotelsCentreVilleRoute: HotelsCentreVilleRoute,
+  HotelsGareRoute: HotelsGareRoute,
+  HotelsPasCherRoute: HotelsPasCherRoute,
+  ParcExpositionsRoute: ParcExpositionsRoute,
+  QuartierDoutreRoute: QuartierDoutreRoute,
+  QueFaireRoute: QueFaireRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
