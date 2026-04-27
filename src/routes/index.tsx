@@ -7,6 +7,7 @@ import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { SeoContent } from "@/components/SeoContent";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { featuredHotels } from "@/data/hotels";
 import { GYG_ANGERS_URL } from "@/lib/affiliate";
 import heroImg from "@/assets/hero-chateau.jpg";
@@ -282,6 +283,13 @@ function Index() {
       />
 
       <FaqSection items={homeFaq} />
+      <AffiliateCta
+        title="Réservez vos expériences à Angers en quelques clics"
+        description="Visites guidées, dégustations, croisières sur la Loire, excursions aux châteaux : tout pour transformer votre séjour à Angers en moment inoubliable. Réservation sécurisée via notre partenaire GetYourGuide®."
+        ctaLabel="Voir les activités"
+      />
+
+
 
       <RelatedLinks exclude={["/"]} />
 

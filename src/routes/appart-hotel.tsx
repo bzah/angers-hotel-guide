@@ -7,6 +7,7 @@ import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { SeoContent } from "@/components/SeoContent";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { apartHotels } from "@/data/hotels";
 import heroImg from "@/assets/hotel-1.jpg";
 
@@ -148,6 +149,13 @@ function Page() {
       />
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="En long séjour à Angers ? Multipliez les expériences"
+        description="Profitez de votre semaine ou de votre mois à Angers pour explorer le Val de Loire, les vignobles d'Anjou et les châteaux des bords de Loire. Sélection d'excursions et d'ateliers à la journée."
+        ctaLabel="Découvrir les sorties"
+      />
+
+
 
       <RelatedLinks exclude={["/appart-hotel"]} />
 

@@ -6,6 +6,7 @@ import { Activities } from "@/components/Activities";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import heroImg from "@/assets/activities.jpg";
 
 const faq: FaqItem[] = [
@@ -66,6 +67,13 @@ function Page() {
       <Activities />
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="Réservez les meilleures activités d'Angers en 1 clic"
+        description="Notre partenariat avec GetYourGuide vous garantit les meilleurs prix, l'annulation gratuite jusqu'à 24h, des guides francophones et une confirmation immédiate par email."
+        ctaLabel="Réserver maintenant"
+      />
+
+
 
       <RelatedLinks exclude={["/que-faire"]} />
 

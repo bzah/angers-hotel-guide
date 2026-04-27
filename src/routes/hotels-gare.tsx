@@ -7,6 +7,7 @@ import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { SeoContent } from "@/components/SeoContent";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { budgetHotels, apartHotels } from "@/data/hotels";
 import heroImg from "@/assets/hotel-3.jpg";
 
@@ -136,6 +137,13 @@ function Page() {
       />
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="Arrivée TGV ? Démarrez votre séjour avec une activité"
+        description="À 8 minutes en tram du centre, vous pouvez enchaîner directement sur une visite guidée, un atelier Cointreau ou une croisière sur la Loire. Réservation immédiate, billets sur smartphone."
+        ctaLabel="Programmer mon séjour"
+      />
+
+
 
       <RelatedLinks exclude={["/hotels-gare"]} />
 

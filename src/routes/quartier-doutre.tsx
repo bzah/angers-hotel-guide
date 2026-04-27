@@ -6,6 +6,7 @@ import { HotelCard } from "@/components/HotelCard";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { featuredHotels } from "@/data/hotels";
 import heroImg from "@/assets/doutre.jpg";
 
@@ -99,6 +100,13 @@ function Page() {
       </section>
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="Visite guidée du quartier de la Doutre"
+        description="Maisons à pans de bois, hospices Saint-Jean, musée Jean-Lurçat : explorez le plus médiéval des quartiers d'Angers avec un guide-conférencier passionné."
+        ctaLabel="Réserver la visite"
+      />
+
+
 
       <RelatedLinks exclude={["/quartier-doutre"]} />
 

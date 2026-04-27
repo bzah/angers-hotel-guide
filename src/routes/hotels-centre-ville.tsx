@@ -7,6 +7,7 @@ import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { SeoContent } from "@/components/SeoContent";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { featuredHotels } from "@/data/hotels";
 import heroImg from "@/assets/angers-aerial.jpg";
 
@@ -165,6 +166,13 @@ function Page() {
       />
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="Complétez votre séjour au centre-ville d'Angers"
+        description="Vous logez en hyper-centre ? Profitez-en pour réserver dès maintenant la visite coupe-file du Château d'Angers, une croisière sur la Maine ou un food tour des Halles — tout est à pied de votre hôtel."
+        ctaLabel="Réserver mes activités"
+      />
+
+
 
       <RelatedLinks exclude={["/hotels-centre-ville"]} />
 

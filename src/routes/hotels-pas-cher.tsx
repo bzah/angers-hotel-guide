@@ -7,6 +7,7 @@ import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { SeoContent } from "@/components/SeoContent";
+import { AffiliateCta } from "@/components/AffiliateCta";
 import { budgetHotels } from "@/data/hotels";
 import heroImg from "@/assets/doutre.jpg";
 
@@ -139,6 +140,13 @@ function Page() {
       />
 
       <FaqSection items={faq} />
+      <AffiliateCta
+        title="Petits prix sur les hôtels — et sur les activités aussi"
+        description="Des dizaines d'expériences à Angers à partir de 16€ : Cointreau, dégustations, balades à vélo, visites guidées. Annulation gratuite jusqu'à 24h, idéal pour les budgets malins."
+        ctaLabel="Activités dès 16€"
+      />
+
+
 
       <RelatedLinks exclude={["/hotels-pas-cher"]} />
 

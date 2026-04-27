@@ -12,7 +12,7 @@ const activities: Activity[] = [
   {
     title: "Visite guidée du Château d'Angers",
     description:
-      "Forteresse royale du XIIIe siècle abritant la fabuleuse Tenture de l'Apocalypse, plus grande tapisserie médiévale au monde.",
+      "Forteresse royale du XIIIe siècle abritant la fabuleuse Tenture de l'Apocalypse, plus grande tapisserie médiévale au monde. Coupe-file inclus.",
     url: gygSearchUrl("Château d'Angers"),
     duration: "2 h",
     price: "à partir de 25€",
@@ -20,7 +20,7 @@ const activities: Activity[] = [
   {
     title: "Croisière sur la Maine et la Loire",
     description:
-      "Embarquez pour une croisière romantique au coucher du soleil entre Angers et la confluence avec la Loire.",
+      "Embarquez pour une croisière romantique au coucher du soleil entre Angers et la confluence avec la Loire. Coupe de Crémant offerte.",
     url: gygSearchUrl("Loire river cruise Angers"),
     duration: "2 h 30",
     price: "à partir de 38€",
@@ -28,7 +28,7 @@ const activities: Activity[] = [
   {
     title: "Dégustation de vins d'Anjou",
     description:
-      "Visite d'un domaine viticole familial avec dégustation de Chenin, Cabernet Franc et Crémant de Loire.",
+      "Visite d'un domaine viticole familial avec dégustation de Chenin, Cabernet Franc et Crémant de Loire AOP.",
     url: gygSearchUrl("Anjou wine tasting"),
     duration: "3 h",
     price: "à partir de 45€",
@@ -36,7 +36,7 @@ const activities: Activity[] = [
   {
     title: "Châteaux de la Loire — Excursion d'une journée",
     description:
-      "Saumur, Brissac et Brézé : les plus beaux châteaux du sud du Val de Loire en une journée au départ d'Angers.",
+      "Saumur, Brissac et Brézé : les plus beaux châteaux du sud du Val de Loire en une journée au départ d'Angers, transport inclus.",
     url: GYG_LOIRE_URL,
     duration: "8 h",
     price: "à partir de 89€",
@@ -44,18 +44,42 @@ const activities: Activity[] = [
   {
     title: "Visite à vélo des bords de Maine",
     description:
-      "Empruntez La Loire à Vélo entre vignobles, troglodytes et villages classés. Vélos électriques disponibles.",
+      "Empruntez La Loire à Vélo entre vignobles, troglodytes et villages classés. Vélos électriques disponibles, guide bilingue.",
     url: gygSearchUrl("Angers bike tour"),
     duration: "4 h",
     price: "à partir de 32€",
   },
   {
-    title: "Cathédrale Saint-Maurice et vieux Angers",
+    title: "Cathédrale Saint-Maurice & vieux Angers",
     description:
-      "Guide-conférencier passionné pour explorer la cathédrale gothique angevine et le quartier de la Doutre.",
+      "Guide-conférencier passionné pour explorer la cathédrale gothique angevine et le quartier médiéval de la Doutre.",
     url: gygSearchUrl("Angers walking tour"),
     duration: "1 h 30",
     price: "à partir de 18€",
+  },
+  {
+    title: "Food tour des Halles d'Angers",
+    description:
+      "Dégustez fouée angevine, rillauds, fromages AOP, Cointreau et chocolats artisanaux avec un guide gourmand local.",
+    url: gygSearchUrl("Angers food tour"),
+    duration: "3 h",
+    price: "à partir de 65€",
+  },
+  {
+    title: "Terra Botanica — Billet coupe-file",
+    description:
+      "Premier parc à thème végétal d'Europe : 500 000 plantes, 40 attractions, idéal en famille à 15 min d'Angers.",
+    url: gygSearchUrl("Terra Botanica Angers"),
+    duration: "Journée",
+    price: "à partir de 22€",
+  },
+  {
+    title: "Distillerie Cointreau — Visite & dégustation",
+    description:
+      "Découvrez l'iconique liqueur d'orange née à Angers en 1849. Visite guidée du musée et atelier cocktails inclus.",
+    url: gygSearchUrl("Cointreau distillery Angers"),
+    duration: "1 h 30",
+    price: "à partir de 16€",
   },
 ];
 
