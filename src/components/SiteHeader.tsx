@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
+import logoUrl from "@/assets/favicon.png";
 
 const nav = [
   { to: "/", label: "Accueil" },
@@ -17,11 +18,15 @@ export function SiteHeader() {
   return (
     <header className="border-b border-ink/10 bg-paper sticky top-0 z-40 backdrop-blur-sm bg-paper/90">
       <div className="container-editorial flex items-center justify-between py-5">
-        <Link to="/" className="flex items-baseline gap-3">
-          <span className="text-xs uppercase tracking-[0.2em] text-ink-muted hidden md:inline">
-            Édition
-          </span>
-          <span className="font-serif text-2xl lg:text-3xl tracking-tight">
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={logoUrl}
+            alt="HotelAngers monogramme"
+            width={40}
+            height={40}
+            className="h-10 w-10 object-contain rounded-sm border border-ink/10"
+          />
+          <span className="font-serif text-2xl lg:text-3xl tracking-tight leading-none">
             Hôtel <span className="italic text-ink-muted">Angers</span>
           </span>
         </Link>
