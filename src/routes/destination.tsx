@@ -122,6 +122,21 @@ function Page() {
         </div>
       </section>
 
+      <FaqSection items={faq} />
+
+      <RelatedLinks exclude={["/destination"]} />
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "TouristDestination",
+          name: "Angers",
+          description: "Capitale historique de l'Anjou, ville d'art et d'histoire au cœur du Val de Loire (UNESCO).",
+          touristType: ["Couples", "Famille", "Voyageurs culturels", "Œnotourisme"],
+          address: { "@type": "PostalAddress", addressLocality: "Angers", postalCode: "49000", addressCountry: "FR" },
+        }}
+      />
+
       <SiteFooter />
     </div>
   );
