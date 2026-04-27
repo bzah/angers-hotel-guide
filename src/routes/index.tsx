@@ -63,22 +63,22 @@ function Index() {
       <SiteHeader />
 
       {/* HERO */}
-      <section className="grid grid-cols-1 lg:grid-cols-12 min-h-[85vh] border-b border-ink/10">
-        <div className="lg:col-span-7 flex flex-col justify-center px-6 lg:px-20 py-20">
-          <div className="mb-8 flex items-center gap-4">
+      <section className="grid grid-cols-1 lg:grid-cols-12 lg:min-h-[85vh] border-b border-ink/10">
+        <div className="lg:col-span-7 flex flex-col justify-center px-5 sm:px-8 lg:px-20 py-16 lg:py-20 order-2 lg:order-1">
+          <div className="mb-6 lg:mb-8 flex items-center gap-4">
             <span className="rule" />
             <span className="eyebrow">Val de Loire, France</span>
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-balance leading-[0.9] tracking-tight mb-8">
+          <h1 className="text-[2.75rem] sm:text-6xl lg:text-7xl xl:text-8xl font-light text-balance leading-[0.95] tracking-tight mb-6 lg:mb-8">
             Le raffinement <br />
             <span className="italic text-ink-muted">à l'ombre du</span> château.
           </h1>
-          <p className="text-lg text-ink-muted max-w-[55ch] leading-relaxed mb-12 text-pretty">
+          <p className="text-base sm:text-lg text-ink-muted max-w-[55ch] leading-relaxed mb-8 lg:mb-12 text-pretty">
             Une sélection rigoureuse d'hôtels particuliers, d'appart-hôtels et de
             retraites historiques au cœur d'Angers. Reposez-vous là où l'histoire
             de France s'est écrite — entre tuffeau, ardoise et bords de Maine.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <a href="#hotels" className="btn-primary">Voir notre sélection</a>
             <a
               href={GYG_ANGERS_URL}
@@ -91,7 +91,7 @@ function Index() {
           </div>
         </div>
 
-        <div className="lg:col-span-5 relative border-l border-ink/10 bg-muted min-h-[500px]">
+        <div className="lg:col-span-5 relative lg:border-l border-ink/10 bg-muted h-[55vh] min-h-[320px] lg:min-h-[500px] order-1 lg:order-2">
           <img
             src={heroImg}
             alt="Château d'Angers au coucher du soleil sur les rives de la Maine"
@@ -99,24 +99,24 @@ function Index() {
             height={1408}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute bottom-6 right-6 bg-paper/95 backdrop-blur-sm px-4 py-2 text-[10px] uppercase tracking-[0.2em] border border-ink/10">
+          <div className="absolute bottom-4 right-4 lg:bottom-6 lg:right-6 bg-paper/95 backdrop-blur-sm px-3 py-1.5 lg:px-4 lg:py-2 text-[9px] lg:text-[10px] uppercase tracking-[0.2em] border border-ink/10">
             Château d'Angers · XIIIe siècle
           </div>
         </div>
       </section>
 
       {/* INTRO */}
-      <section className="container-editorial py-24 grid grid-cols-1 lg:grid-cols-12 gap-12">
+      <section className="container-editorial py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         <div className="lg:col-span-5">
           <div className="mb-6 flex items-center gap-4">
             <span className="rule" />
             <span className="eyebrow">L'Anjou, autrement</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-light leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light leading-tight">
             Angers, capitale <span className="italic text-ink-muted">discrète</span> du Val de Loire.
           </h2>
         </div>
-        <div className="lg:col-span-7 lg:col-start-7 space-y-6 text-ink-muted text-lg leading-relaxed">
+        <div className="lg:col-span-7 lg:col-start-7 space-y-5 text-ink-muted text-base sm:text-lg leading-relaxed">
           <p>
             Classée parmi les villes les plus agréables de France, Angers conjugue
             patrimoine UNESCO, douceur angevine et une scène hôtelière en plein
@@ -134,24 +134,24 @@ function Index() {
       </section>
 
       {/* FEATURED HOTELS */}
-      <section id="hotels" className="bg-paper-light py-28 border-y border-ink/10">
+      <section id="hotels" className="bg-paper-light py-20 lg:py-28 border-y border-ink/10">
         <div className="container-editorial">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
             <div>
               <div className="mb-4 flex items-center gap-4">
                 <span className="rule" />
                 <span className="eyebrow">Adresses Confidentielles</span>
               </div>
-              <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight">
                 Nos hôtels coups de <span className="italic text-ink-muted">cœur</span>
               </h2>
             </div>
-            <p className="text-ink-muted max-w-md">
+            <p className="text-ink-muted max-w-md text-sm sm:text-base">
               Trois établissements emblématiques d'Angers, alliant héritage architectural et confort contemporain.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-12 lg:gap-y-16">
             {featuredHotels.map((h) => (
               <HotelCard key={h.name} hotel={h} />
             ))}
@@ -160,7 +160,7 @@ function Index() {
       </section>
 
       {/* AERIAL / DESTINATION */}
-      <section className="relative h-[60vh] min-h-[400px] flex items-end overflow-hidden">
+      <section className="relative h-[55vh] min-h-[340px] lg:h-[60vh] lg:min-h-[400px] flex items-end overflow-hidden">
         <img
           src={aerialImg}
           alt="Vue aérienne d'Angers et de la cathédrale Saint-Maurice"
@@ -170,9 +170,9 @@ function Index() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-transparent" />
-        <div className="container-editorial relative pb-16 text-paper-light">
+        <div className="container-editorial relative pb-12 lg:pb-16 text-paper-light">
           <span className="eyebrow text-paper-light/80">Destination Angers</span>
-          <h2 className="font-serif text-4xl lg:text-6xl font-light max-w-3xl mt-4">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-light max-w-3xl mt-3 lg:mt-4">
             Une ville à taille humaine, <span className="italic">une histoire millénaire.</span>
           </h2>
         </div>

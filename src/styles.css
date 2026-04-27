@@ -90,6 +90,16 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  html, body {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 
   h1, h2, h3, h4, .font-serif {
@@ -108,7 +118,12 @@
   .container-editorial {
     max-width: 1400px;
     margin-inline: auto;
-    padding-inline: 1.5rem;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-editorial {
+      padding-inline: 2.5rem;
+    }
   }
   @media (min-width: 1024px) {
     .container-editorial {
@@ -130,13 +145,17 @@
     justify-content: center;
     background-color: var(--ink);
     color: var(--paper-light);
-    padding: 0.875rem 2rem;
-    font-size: 0.75rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     font-weight: 500;
     transition: background-color 0.3s;
     cursor: pointer;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .btn-primary { padding: 0.875rem 2rem; font-size: 0.75rem; letter-spacing: 0.2em; }
   }
   .btn-primary:hover {
     background-color: var(--terracotta);
@@ -148,13 +167,17 @@
     justify-content: center;
     border: 1px solid var(--ink);
     color: var(--ink);
-    padding: 0.875rem 2rem;
-    font-size: 0.75rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.18em;
     font-weight: 500;
     transition: all 0.3s;
     cursor: pointer;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .btn-outline { padding: 0.875rem 2rem; font-size: 0.75rem; letter-spacing: 0.2em; }
   }
   .btn-outline:hover {
     background-color: var(--ink);

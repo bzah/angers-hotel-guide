@@ -31,9 +31,9 @@ export function HotelCard({ hotel }: { hotel: Hotel }) {
           </div>
         )}
       </div>
-      <div className="flex justify-between items-start mb-2 gap-4">
-        <h3 className="font-serif text-2xl tracking-tight">{hotel.name}</h3>
-        <div className="text-base font-medium tabular-nums shrink-0">
+      <div className="flex justify-between items-start mb-2 gap-3">
+        <h3 className="font-serif text-xl sm:text-2xl tracking-tight leading-tight">{hotel.name}</h3>
+        <div className="text-sm sm:text-base font-medium tabular-nums shrink-0 mt-1">
           {hotel.priceFrom}€
         </div>
       </div>
