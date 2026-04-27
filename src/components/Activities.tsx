@@ -61,14 +61,14 @@ const activities: Activity[] = [
 
 export function Activities() {
   return (
-    <section className="container-editorial py-24">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+    <section className="container-editorial py-16 lg:py-24">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16 gap-6">
         <div>
           <div className="mb-4 flex items-center gap-4">
             <span className="rule" />
             <span className="eyebrow">Expériences sélectionnées</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-light tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight">
             Que faire <span className="italic text-ink-muted">à Angers</span>
           </h2>
         </div>
@@ -82,17 +82,17 @@ export function Activities() {
         </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-14">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 lg:gap-x-10 gap-y-12 lg:gap-y-14">
         {activities.map((a) => (
-          <article key={a.title} className="border-t border-ink/15 pt-6 group">
-            <div className="flex justify-between text-[11px] uppercase tracking-[0.2em] text-ink-muted mb-4">
+          <article key={a.title} className="border-t border-ink/15 pt-5 lg:pt-6 group">
+            <div className="flex justify-between text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-ink-muted mb-3 lg:mb-4 gap-3">
               <span>{a.duration}</span>
-              <span>{a.price}</span>
+              <span className="text-right">{a.price}</span>
             </div>
-            <h3 className="font-serif text-2xl mb-3 group-hover:text-terracotta transition-colors">
+            <h3 className="font-serif text-xl sm:text-2xl mb-3 group-hover:text-terracotta transition-colors leading-snug">
               {a.title}
             </h3>
-            <p className="text-sm text-ink-muted leading-relaxed mb-6 text-pretty">
+            <p className="text-sm text-ink-muted leading-relaxed mb-5 lg:mb-6 text-pretty">
               {a.description}
             </p>
             <a
