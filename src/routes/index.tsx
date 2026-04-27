@@ -6,6 +6,7 @@ import { Activities } from "@/components/Activities";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { SeoContent } from "@/components/SeoContent";
 import { featuredHotels } from "@/data/hotels";
 import { GYG_ANGERS_URL } from "@/lib/affiliate";
 import heroImg from "@/assets/hero-chateau.jpg";
