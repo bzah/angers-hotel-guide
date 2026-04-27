@@ -6,6 +6,7 @@ import { HotelCard } from "@/components/HotelCard";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { SeoContent } from "@/components/SeoContent";
 import { apartHotels } from "@/data/hotels";
 import heroImg from "@/assets/hotel-1.jpg";
 
@@ -105,6 +106,46 @@ function Page() {
           </div>
         </div>
       </section>
+
+      <SeoContent
+        title="Appart-Hôtel à Angers : la formule liberté pour long séjour"
+        intro={
+          <>
+            <p>
+              L'<strong className="text-ink font-medium">appart-hôtel à Angers</strong> séduit chaque année davantage de voyageurs : familles avec enfants, salariés en mission longue durée, étudiants en stage à l'<em>Université d'Angers</em>, l'<em>ESSCA</em> ou l'<em>ESEO</em>, intermittents et patients de l'<em>ICO Paul-Papin</em>. La formule combine cuisine équipée, espace salon, machine à laver et services hôteliers (réception, ménage, wifi).
+            </p>
+            <p>
+              Notre sélection couvre les principales enseignes (<strong className="text-ink font-medium">Adagio Aparthotel</strong>, <strong className="text-ink font-medium">Appart'City</strong>, <strong className="text-ink font-medium">Citadines</strong>, <strong className="text-ink font-medium">Néméa</strong>, <strong className="text-ink font-medium">All Suites</strong>, <strong className="text-ink font-medium">Séjours & Affaires</strong>) ainsi que des résidences indépendantes plus confidentielles. Tarifs négociés à partir de 95€ la nuit en studio.
+            </p>
+          </>
+        }
+        sections={[
+          { heading: "Studio, T2 ou T3 : que choisir à Angers ?", body: <p>Studio (20-25 m²) pour 1-2 personnes : 95-130€/nuit. T2 (35-45 m²) pour 2-4 personnes : 130-180€. T3 (55-70 m²) pour familles ou colocations : 180-240€. Au-delà de 7 nuits, comptez -20 à -30%.</p> },
+          { heading: "Tarifs mensuels et longs séjours", body: <p>Pour un mois complet : 1 200€ pour un studio, 1 600€ pour un T2, 2 000€ pour un T3 (charges, ménage hebdo, wifi, parking inclus). Facturation entreprise possible avec TVA récupérable. Idéal mission, intérim, formation.</p> },
+          { heading: "Appart-hôtel pour familles à Angers", body: <p>T2 et T3 avec lit bébé sur demande, cuisine pour les biberons, espace salon pour les jeux. Plus économique qu'un hôtel pour 4+ personnes et infiniment plus confortable. Plusieurs résidences ont une piscine extérieure.</p> },
+          { heading: "Appart-hôtel pour étudiants et stagiaires", body: <p>Proximité Université d'Angers (Belle-Beille), ESSCA, ESEO, ENSAM, IRCOM. Contrats au mois sans caution démesurée, ménage inclus, wifi haut débit, parfait pour stage de 3-6 mois sans avoir à monter un dossier classique de location.</p> },
+          { heading: "Appart-hôtel pour voyage d'affaires", body: <p>Espace bureau dédié, wifi pro, parking sécurisé, facturation entreprise, petit-déjeuner buffet en option. À proximité des principales entreprises angevines : Thalès, Bull, Brioche Pasquier, Scania, Cointreau, Eram.</p> },
+          { heading: "Quartiers où trouver un appart-hôtel à Angers", body: <p>Centre-ville (Adagio, Citadines), gare Saint-Laud (Appart'City), Saint-Serge (All Suites, près du Parc Expo), zone d'activités Beaucouzé/Saint-Sylvain (Néméa). Choix selon vos déplacements quotidiens.</p> },
+          { heading: "Services et équipements standards", body: <p>Cuisine équipée (plaques, micro-ondes, frigo, vaisselle), wifi, télévision, salle de bain privative, linge de lit fourni. Options : ménage quotidien, petit-déjeuner, parking, lave-vaisselle, four (T2+).</p> },
+          { heading: "Annulation et flexibilité", body: <p>La plupart des appart-hôtels d'Angers proposent l'annulation gratuite jusqu'à 48h avant. Pour les longs séjours et tarifs mensuels, préavis d'un mois standard. Caution typique : 200-300€ par CB pré-autorisée.</p> },
+        ]}
+        keywords={[
+          "Appart hotel Angers",
+          "Appart'hotel Angers",
+          "Aparthotel Angers",
+          "Residence hoteliere Angers",
+          "Appartement meublé Angers court séjour",
+          "Studio meublé Angers",
+          "Adagio Angers",
+          "Appart City Angers",
+          "Citadines Angers",
+          "Appart hotel Angers gare",
+          "Appart hotel Angers centre",
+          "Appart hotel Angers mois",
+          "Logement temporaire Angers",
+          "Appart hotel Angers stage",
+        ]}
+      />
 
       <FaqSection items={faq} />
 

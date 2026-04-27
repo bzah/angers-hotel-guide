@@ -6,6 +6,7 @@ import { HotelCard } from "@/components/HotelCard";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { SeoContent } from "@/components/SeoContent";
 import { budgetHotels, apartHotels } from "@/data/hotels";
 import heroImg from "@/assets/hotel-3.jpg";
 
@@ -99,6 +100,40 @@ function Page() {
           ))}
         </div>
       </section>
+
+      <SeoContent
+        title="Hôtel près de la gare d'Angers Saint-Laud"
+        intro={
+          <>
+            <p>
+              La <strong className="text-ink font-medium">gare d'Angers Saint-Laud</strong> est l'une des plus fréquentées du Grand Ouest, avec plus de 4 millions de voyageurs par an. Située à 12 minutes à pied du centre historique et à 5 minutes en tramway de la Place du Ralliement, elle dessert Paris-Montparnasse en 1h30 par TGV InOui et Ouigo, ainsi que Nantes, Rennes, Le Mans, Tours, Lyon et Marseille.
+            </p>
+            <p>
+              Loger à proximité de la gare est idéal pour les <strong className="text-ink font-medium">voyageurs d'affaires</strong>, les correspondances tardives, les départs matinaux et les courts séjours TGV. Notre sélection couvre tous les budgets, du low-cost à 65€ aux 4★ comme le Mercure Centre Gare.
+            </p>
+          </>
+        }
+        sections={[
+          { heading: "Hôtels à moins de 5 minutes à pied de la gare", body: <p>Mercure Angers Centre Gare, Ibis Angers Centre Gare, Best Western Anjou, Hôtel de France, Première Classe Saint-Laud. Tous accessibles bagages roulants, sans traverser de grands axes.</p> },
+          { heading: "Pourquoi loger près de la gare Saint-Laud", body: <p>Départs TGV à 6h sans stress, retours tardifs sécurisés (quartier bien éclairé et fréquenté), accès direct au tramway A vers le centre, parkings souterrains à proximité (Saint-Laud P1 et P2).</p> },
+          { heading: "Restaurants autour de la gare", body: <p>L'Atypik, La Table de Saint-Laud, Le Bouchon Lyonnais, Le Vintage : excellentes adresses ouvertes en service du soir tardif (jusqu'à 23h), idéales après une arrivée TGV.</p> },
+          { heading: "Liaisons TGV depuis Angers Saint-Laud", body: <p>Paris-Montparnasse 1h30 (1 train/heure), Nantes 40 min, Le Mans 45 min, Rennes 1h15, Bordeaux 4h, Lyon 4h, Marseille 5h, Strasbourg 5h30 via Massy.</p> },
+          { heading: "Parking pour clients de la gare", body: <p>Effia Saint-Laud P1 et P2 : 14€/24h, 70€/semaine. Plusieurs hôtels du quartier offrent un partenariat à 12€/24h. Indigo La Roseraie pour les longs séjours.</p> },
+          { heading: "Tramway depuis la gare", body: <p>Station Gare Saint-Laud sur la ligne A : 8 min jusqu'au Ralliement (centre), 12 min jusqu'à Foch-Maison Bleue, 25 min jusqu'à Avrillé. Ticket 1,60€, pass 24h à 4,30€.</p> },
+        ]}
+        keywords={[
+          "Hotel gare Angers",
+          "Hotel Angers Saint-Laud",
+          "Hotel près gare Angers",
+          "Hotel Angers TGV",
+          "Mercure Angers Centre Gare",
+          "Ibis Angers Centre Gare",
+          "Best Western Anjou Angers",
+          "Hotel Angers business",
+          "Hotel Angers court séjour TGV",
+          "Hotel Angers correspondance",
+        ]}
+      />
 
       <FaqSection items={faq} />
 

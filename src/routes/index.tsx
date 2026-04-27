@@ -6,6 +6,7 @@ import { Activities } from "@/components/Activities";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { SeoContent } from "@/components/SeoContent";
 import { featuredHotels } from "@/data/hotels";
 import { GYG_ANGERS_URL } from "@/lib/affiliate";
 import heroImg from "@/assets/hero-chateau.jpg";
@@ -179,6 +180,106 @@ function Index() {
       </section>
 
       <Activities />
+
+      <SeoContent
+        title="Tout savoir avant de réserver votre hôtel à Angers"
+        intro={
+          <>
+            <p>
+              Réserver un <strong className="text-ink font-medium">hôtel à Angers</strong> ne se résume pas à comparer des prix sur les agrégateurs. Capitale historique de l'Anjou, ancienne résidence des rois de France et porte d'entrée du Val de Loire classé au patrimoine mondial de l'UNESCO, Angers possède une offre hôtelière dense, contrastée et particulièrement bien répartie entre le centre médiéval, les rives de la Maine, le quartier de la gare TGV Saint-Laud et les zones d'affaires de Saint-Serge.
+            </p>
+            <p>
+              Notre rédaction angevine a passé 18 mois à visiter, tester et noter chaque établissement. Cette page rassemble l'essentiel pour choisir le bon hôtel à Angers selon votre profil : touriste week-end, famille, voyageur d'affaires, étudiant en stage, ou amateur d'œnotourisme dans le vignoble d'Anjou-Saumur.
+            </p>
+          </>
+        }
+        sections={[
+          {
+            heading: "Les meilleurs quartiers où loger à Angers",
+            body: (
+              <p>
+                Le <strong className="text-ink font-medium">centre-ville historique</strong> (49000), entre la cathédrale Saint-Maurice et la Place du Ralliement, reste imbattable pour un séjour touristique : tout se fait à pied. Le <strong className="text-ink font-medium">quartier de la Doutre</strong>, sur la rive droite de la Maine, séduit les amateurs de pierres médiévales et de maisons à pans de bois. Le <strong className="text-ink font-medium">quartier de la gare Saint-Laud</strong> convient aux pros et aux courts séjours TGV. <strong className="text-ink font-medium">Saint-Serge</strong> est idéal lors des salons au Parc des Expositions.
+              </p>
+            ),
+          },
+          {
+            heading: "Hôtel pas cher, 3 étoiles, 4 étoiles ou boutique-hôtel ?",
+            body: (
+              <p>
+                Angers couvre toutes les gammes. Un <strong className="text-ink font-medium">hôtel pas cher à Angers</strong> commence dès 60€/nuit (Ibis Budget, B&B, Première Classe). Les <strong className="text-ink font-medium">hôtels 3 étoiles</strong> oscillent entre 95€ et 140€. Les <strong className="text-ink font-medium">hôtels 4 étoiles d'Angers</strong> (Mercure Centre Gare, Best Western Anjou, boutique-hôtels) se positionnent entre 160€ et 280€. Pour un long séjour, l'<strong className="text-ink font-medium">appart-hôtel à Angers</strong> reste la formule la plus économique dès 4 nuits.
+              </p>
+            ),
+          },
+          {
+            heading: "Quand venir à Angers : la bonne saison",
+            body: (
+              <p>
+                La haute saison touristique s'étend de <strong className="text-ink font-medium">mai à octobre</strong>, avec un pic en juillet-août et lors des <em>Accroche-Cœurs</em> début septembre. La douceur angevine, célébrée par Joachim du Bellay, rend les terrasses agréables dès avril. <strong className="text-ink font-medium">Octobre</strong> reste notre mois préféré : couleurs d'automne sur la Loire, vendanges dans les vignobles d'Anjou-Saumur, tarifs hôteliers en baisse. Évitez les périodes de salons (SIVAL en janvier) si vous cherchez un bon rapport qualité-prix.
+              </p>
+            ),
+          },
+          {
+            heading: "Comment venir à Angers depuis Paris ou la province",
+            body: (
+              <p>
+                <strong className="text-ink font-medium">TGV depuis Paris-Montparnasse</strong> en 1h30 (1 train/heure, à partir de 25€ avec Ouigo). Liaisons TGV directes depuis Nantes (40 min), Le Mans (45 min), Rennes (1h15), Lyon (4h) et Marseille (5h). En voiture, A11 puis A87 (3h depuis Paris, péages ~35€). L'<strong className="text-ink font-medium">aéroport Angers-Loire</strong> propose quelques liaisons saisonnières ; sinon, Nantes-Atlantique à 1h.
+              </p>
+            ),
+          },
+          {
+            heading: "Que visiter à Angers pendant votre séjour",
+            body: (
+              <p>
+                Le <strong className="text-ink font-medium">Château d'Angers</strong> et sa <strong className="text-ink font-medium">Tenture de l'Apocalypse</strong> (le plus grand ensemble de tapisseries médiévales au monde, 104 mètres de long) restent l'incontournable absolu. Ajoutez la cathédrale Saint-Maurice, le musée des Beaux-Arts, la galerie David d'Angers, le musée Jean-Lurçat, et une croisière sur la Maine. Les amateurs de nature pousseront jusqu'au <em>Lac de Maine</em> ou au parc Terra Botanica, premier parc à thème végétal d'Europe.
+              </p>
+            ),
+          },
+          {
+            heading: "Excursions depuis votre hôtel à Angers",
+            body: (
+              <p>
+                Angers est la base idéale pour explorer le <strong className="text-ink font-medium">Val de Loire</strong>. À moins d'une heure : châteaux de Brissac, Serrant, Plessis-Bourré, abbaye royale de Fontevraud, Saumur et son école de cavalerie, vignobles d'Anjou (Savennières, Coteaux-du-Layon, Chinon). Notre partenaire <strong className="text-ink font-medium">GetYourGuide</strong> propose des excursions guidées en français et anglais au départ d'Angers.
+              </p>
+            ),
+          },
+          {
+            heading: "Réservation directe ou via un comparateur ?",
+            body: (
+              <p>
+                Pour les boutique-hôtels et établissements indépendants d'Angers, la réservation directe permet souvent un surclassement ou un petit-déjeuner offert. Pour les chaînes (Mercure, Ibis, Novotel, Best Western, Kyriad), les comparateurs offrent fréquemment de meilleurs tarifs. Notre guide vous oriente vers la solution la plus avantageuse, en toute transparence.
+              </p>
+            ),
+          },
+          {
+            heading: "Hôtels accessibles, animaux acceptés, parking",
+            body: (
+              <p>
+                La majorité des hôtels du centre-ville d'Angers disposent de chambres <strong className="text-ink font-medium">accessibles PMR</strong>. Les animaux de compagnie sont acceptés dans environ 60% des établissements (souvent 10-15€/nuit). Le stationnement est un point sensible en hyper-centre : privilégiez les hôtels avec parking privé ou partenariat avec un parking souterrain (Ralliement, Mail, Saint-Laud).
+              </p>
+            ),
+          },
+        ]}
+        keywords={[
+          "Hôtel Angers",
+          "Hotel Angers centre ville",
+          "Hotel Angers pas cher",
+          "Appart hotel Angers",
+          "Hotel Angers gare",
+          "Hotel Angers 4 étoiles",
+          "Boutique hotel Angers",
+          "Hotel près du château d'Angers",
+          "Hotel Angers Saint-Laud",
+          "Hotel Angers Doutre",
+          "Hotel Angers Ralliement",
+          "Hotel Angers Val de Loire",
+          "Que faire à Angers",
+          "Visiter Angers",
+          "Week-end Angers",
+          "Hotel Angers parking",
+          "Hotel Angers tramway",
+          "Hotel Angers parc expo",
+        ]}
+      />
 
       <FaqSection items={homeFaq} />
 

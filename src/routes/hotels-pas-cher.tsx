@@ -6,6 +6,7 @@ import { HotelCard } from "@/components/HotelCard";
 import { FaqSection, type FaqItem } from "@/components/FaqSection";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { JsonLd } from "@/components/JsonLd";
+import { SeoContent } from "@/components/SeoContent";
 import { budgetHotels } from "@/data/hotels";
 import heroImg from "@/assets/doutre.jpg";
 
@@ -98,6 +99,44 @@ function Page() {
           </ol>
         </div>
       </section>
+
+      <SeoContent
+        title="Hôtel pas cher à Angers : le guide budget malin"
+        intro={
+          <>
+            <p>
+              Trouver un <strong className="text-ink font-medium">hôtel pas cher à Angers</strong> tout en restant à proximité du centre historique est parfaitement réalisable. La capitale angevine reste l'une des villes touristiques de France les plus accessibles côté tarif hôtelier, avec une moyenne autour de 85€ la nuit toutes catégories confondues — bien en-dessous de Tours, Nantes ou Rennes.
+            </p>
+            <p>
+              Notre sélection regroupe les meilleures adresses économiques d'Angers, vérifiées sur place : <strong className="text-ink font-medium">Ibis Budget</strong>, <strong className="text-ink font-medium">B&B Hôtels</strong>, <strong className="text-ink font-medium">Première Classe</strong>, <strong className="text-ink font-medium">Kyriad</strong>, hôtels indépendants 2 étoiles et auberge de jeunesse. Toutes les adresses sont notées au-dessus de 8/10 sur les avis voyageurs.
+            </p>
+          </>
+        }
+        sections={[
+          { heading: "Quels quartiers pour un hôtel économique à Angers ?", body: <p>Saint-Serge (près du Parc Expo), Saint-Laud (gare TGV), boulevard du Roi-René, La Roseraie et Belle-Beille concentrent les meilleurs prix. À 10 minutes du centre en tramway, vous économisez 30 à 50% par nuit.</p> },
+          { heading: "Hôtels low cost à moins de 70€", body: <p>Ibis Budget Angers Centre Gare, B&B Hôtel Angers 1 et 2, Première Classe Angers Ouest Beaucouzé, Hôtel Continental, Hôtel des Lices proposent régulièrement des chambres entre 55€ et 70€ en réservant 30 jours à l'avance.</p> },
+          { heading: "Auberge de jeunesse à Angers", body: <p>Le <strong className="text-ink font-medium">Centre International d'Accueil Lac de Maine</strong> (HI Hostel) propose dortoirs dès 25€ et chambres privées dès 50€. Cadre verdoyant en bord de lac, à 15 min du centre par bus n°6.</p> },
+          { heading: "Quand réserver pour le meilleur prix ?", body: <p>Dimanche soir au mardi soir : tarifs jusqu'à 40% plus bas que le week-end. Mois les moins chers : <strong className="text-ink font-medium">février, mars, novembre</strong>. Évitez SIVAL (janvier), Foire d'Angers (mai), Made in Angers (mars), Accroche-Cœurs (septembre).</p> },
+          { heading: "Astuces pour réduire encore la facture", body: <p>Acceptez une chambre sans fenêtre extérieure (-15-20€), réservez en non-remboursable (-10-15%), profitez des offres "early bird" 30 jours avant, et utilisez les codes promo des cartes bancaires (Visa Premier, Amex).</p> },
+          { heading: "Petit-déjeuner : payer à l'hôtel ou dehors ?", body: <p>Dehors quasi systématiquement. Comptez 10€ buffet hôtel vs 4-6€ en boulangerie locale (Boulangerie Briand, Maison Becam, Pierre Hivert). Économie : 10-20€ pour deux personnes par séjour.</p> },
+          { heading: "Hôtels pas chers avec parking gratuit", body: <p>Plusieurs établissements en périphérie offrent le parking gratuit : Première Classe Beaucouzé, Ibis Budget Saint-Serge, Campanile Angers Sud Les Ponts-de-Cé. Indispensable pour un séjour en voiture.</p> },
+          { heading: "Sécurité et propreté des hôtels low cost", body: <p>Tous les établissements de notre liste sont notés au-dessus de 8/10 sur les critères propreté et sécurité. Aucune adresse douteuse : nous excluons systématiquement les hôtels notés sous 7,5.</p> },
+        ]}
+        keywords={[
+          "Hotel pas cher Angers",
+          "Hotel Angers low cost",
+          "Hotel Angers économique",
+          "Hotel Angers petit budget",
+          "Ibis Budget Angers",
+          "B&B Hotel Angers",
+          "Première Classe Angers",
+          "Auberge jeunesse Angers",
+          "Hotel Angers moins de 70 euros",
+          "Hotel Angers Saint-Serge",
+          "Hotel Angers Roseraie",
+          "Hotel Angers parking gratuit",
+        ]}
+      />
 
       <FaqSection items={faq} />
 
